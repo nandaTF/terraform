@@ -3,7 +3,7 @@
       {
         "type": "googlecompute",
         "project_id": "{{user `project_id`}}",
-        "source_image_family": "ubuntu-1804-lts",
+        "source_image_family": "ubuntu-1910-eoan-v20200331",
         "zone": "us-central1-a",
         "image_description": "packer-image",
         "ssh_username": "root",
