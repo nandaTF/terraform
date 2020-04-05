@@ -1,7 +1,7 @@
 # Perform a Packer build based on the `packer.json` configuration. This Packer
 # build creates a GCE image.
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/mhr-terraform/gcloud'
   args:
   - kms
   - decrypt
