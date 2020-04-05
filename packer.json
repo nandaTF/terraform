@@ -1,0 +1,25 @@
+{
+    "builders": [
+      {
+        "type": "googlecompute",
+        "project_id": "{{user `project_id`}}",
+        "source_image_family": "ubuntu-1804-lts",
+        "zone": "us-central1-a",
+        "image_description": "packer-image",
+        "ssh_username": "root",
+        "account_file": "secrets.json"
+      }
+    ],
+    "provisioners" : [
+        {
+            "type": "shell",
+            "script": "scripts/nginx.sh"
+        },
+        {
+          "type": "goss",
+          "tests": [
+            "goss/goss.yaml"
+          ]
+        }
+      ]
+}
